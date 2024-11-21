@@ -1,0 +1,41 @@
+---
+const services = [
+  {
+    title: "Dog Walking",
+    description: "Regular exercise and outdoor adventures for your canine companion",
+    icon: "🦮"
+  },
+  {
+    title: "Pet Sitting",
+    description: "In-home care and companionship while you're away",
+    icon: "🏠"
+  },
+  {
+    title: "Grooming",
+    description: "Professional grooming services to keep your pet looking their best",
+    icon: "✨"
+  },
+  {
+    title: "Vet Visits",
+    description: "Assistance with veterinary appointments and medication",
+    icon: "⚕️"
+  }
+];
+---
+<section id="services" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+      <p class="text-xl text-gray-600">Comprehensive care solutions for your beloved pets</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {services.map(service => (
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up">
+          <div class="text-4xl mb-4">{service.icon}</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+          <p class="text-gray-600">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

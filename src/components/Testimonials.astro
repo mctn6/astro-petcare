@@ -1,0 +1,36 @@
+---
+const testimonials = [
+  {
+    name: "Johnson Smith",
+    text: "The best pet care service we've ever used! Our dog loves their daily walks.",
+    image: "/testimonial1.png"
+  },
+  {
+    name: "Emily Clark",
+    text: "Professional, caring, and reliable. They treat our cats like their own family.",
+    image: "/testimonial2.png"
+  },
+  {
+    name: "Mike Peterson",
+    text: "Outstanding grooming service. Our puppy looks amazing after every visit!",
+    image: "/testimonial3.png"
+  }
+];
+---
+<section class="py-20 bg-blue-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">What Pet Parents Say</h2>
+      <p class="text-xl text-gray-600">Don't just take our word for it</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map(testimonial => (
+        <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up">
+          <img src={testimonial.image} alt={testimonial.name} class="w-20 h-20 rounded-full mx-auto mb-6" />
+          <p class="text-gray-600 mb-6 italic">"{testimonial.text}"</p>
+          <p class="font-semibold text-gray-900">{testimonial.name}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
